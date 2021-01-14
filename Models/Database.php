@@ -16,15 +16,21 @@ class Database {
      */
     public static function getInstance() {
 
+=======
+
 //        $username ='sgb849';
 //        $password = 'f1m9mHBhjktiNqf';
 //        $host = 'poseidon.salford.ac.uk';
 //        $dbName = 'sgb849';
 
+
         $username ='hc21-11';
         $password = 'j5zuR5rjKDGitbd';
         $host = 'poseidon.salford.ac.uk';
         $dbName = 'hc21_11';
+
+       
+=======
 
 //        $host = "82.19.89.2";
 //        $username ='SA';
@@ -32,6 +38,7 @@ class Database {
 //        $dbName = 'TestDatabse';
 
        //Awais Personel server
+
 
        if(self::$_dbInstance === null) { //checks if the PDO exists
             // creates new instance if not, sending in connection info

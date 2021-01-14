@@ -36,7 +36,6 @@
                                     echo "<h3 class='text-danger'>" . $_GET["error"] . "</h3>";
                                 }
                             ?>
-
                         </div>
                     </form>
                 </div>
@@ -49,7 +48,7 @@
 
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" >Danyal Auction Site</a>
+        <a class="navbar-brand" >KRM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,7 +56,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href=<?="http://" . $_SERVER["SERVER_NAME"] . ":8005"?>>Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href=<?="http://" . $_SERVER["SERVER_NAME"] . ":8001"?>>Home <span class="sr-only">(current)</span></a>
                 </li>
 
                 <!--Logout Section-->
@@ -67,7 +66,6 @@
                         <a class="nav-link" href="../../controller/logout.php">Logout</a>
                     </li>
                 <?php else: ?>
-
 
                     <!--Register Section-->
                     <li class="nav-item">
@@ -85,21 +83,20 @@
                 <li class="nav-item">
                     <div class="dropdown show">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenu" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Auction
+                            Projects
                         </a>
 
                         <!--Drop down menu-->
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu" role="menu">
                             <?php if(strpos($_SERVER["REQUEST_URI"], "controller")) :?>
-                                <a class="dropdown-item" href="../../controller/createAuction.php">Create Auction</a>
-
+                                <a class="dropdown-item" href="../../controller/createAuction.php">Create Project</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../../viewAuctions.php">View Auctions</a>
+                                <a class="dropdown-item" href="../../viewAuctions.php">View Project</a>
                             <?php else: ?>
-                                <a class="dropdown-item" href="../../controller/createAuction.php">Create Auction</a>
+                                <a class="dropdown-item" href="../../controller/createAuction.php">Create Project</a>
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../../controller/viewAuctions.php">View Auctions</a>
+                                <a class="dropdown-item" href="../../controller/viewAuctions.php">View Project</a>
                                 <a class="dropdown-item" href="../../controller/bids.php">Bid List</a>
                             <?php endif; ?>
                         </div>
@@ -113,7 +110,6 @@
                 <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" name="searchButton" type="submit">Search</button>
             </form>
-
         </div>
     </nav>
 

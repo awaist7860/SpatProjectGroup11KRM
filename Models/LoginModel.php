@@ -18,7 +18,6 @@ class LoginModel
     public function login($email, $psw)
     {
         $userDataset = new userDataSet();               //Gets the user data set
-
         $userData =  $userDataset->fetchUsers($email);  //Fetches the users
 
         //If statement used to verify password and get the password
