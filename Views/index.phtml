@@ -1,0 +1,331 @@
+
+<?php require_once("Models/UserDataSet.php");//This is mvc
+$SearchDataSet1 = (new userDataSet())->getAllUsers();?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+
+    /*This make sure that everything is set to zero*/
+    *,*::before,*::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+
+
+    body{
+        background-image: url(img/barber%20pic%20for%20background.jpg);
+        background-color: #A38983;
+
+        height: 120px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-align: center;
+    }
+
+    table.ServiceTable{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table.timesTable{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+    }
+    .times h3{
+        margin-bottom: 2%;
+
+    }
+
+    .Styles{
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .notice p{
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 10%;
+    }
+
+
+    span{
+        position:absolute;
+        top: 8px;
+        left: 16px;
+    }
+
+</style>
+<body>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <h2>Contact Me</h2>
+    <a href="tel:00447930836880">Phone: 07930836880</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+</div>
+
+<div id="main"><!--Get rid of this if you want to cover the content instead of mvoing it and change container pt to 5-->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div class="container pt-4s"></div>
+    <div class="Title">
+        <h1>Werneth Barbers</h1>
+    </div>
+
+    <div class="container" style="color: #1b1e21">
+        <div class="row">
+            <?php
+            foreach ($SearchDataSet1 as $Key => $Search){ ?>
+
+                <div class="col-md-3 col-md-6">
+                    <div class="card text-center">
+                        <div class="card-block">
+                            <h4>Lot Number <?php echo $Search->getID()?></h4>
+                        </div>
+                        <div class="card-title">
+                            <h4><?php echo $Search->getUserName()?></h4>
+                        </div>
+                        <div class="card-text">
+                            <p><?php echo $Search->getPassword()?></p>
+                        </div>
+                    </div>
+                </div>
+
+            <?php }
+            ?>
+        </div>
+    </div>
+
+    <div class="Services">
+        <h3>Services</h3>
+        <table class="ServiceTable tabel-borderless">
+            <tr>
+                <td>Teens and Mens</td>
+                <td>  ---  </td>
+                <td>£7.00</td>
+            </tr>
+            <tr>
+                <td>Senior Citizen</td>
+                <td>  ---  </td>
+                <td>£4.50</td>
+            </tr>
+            <tr>
+                <td>Kids(Under 12’s)</td>
+                <td>  ---  </td>
+                <td>£6.50</td>
+            </tr>
+            <tr>
+                <td>Kids Back and Sides</td>
+                <td>  ---  </td>
+                <td>£6.50</td>
+            </tr>
+            <tr>
+                <td>Mohawk and V Cut</td>
+                <td>  ---  </td>
+                <td>£8.50</td>
+            </tr>
+            <tr>
+                <td>Close Zero</td>
+                <td>  ---  </td>
+                <td>£8.00</td>
+            </tr>
+            <tr>
+                <td>Extra CLose</td>
+                <td>  ---  </td>
+                <td>£8.50</td>
+            </tr>
+            <tr>
+                <td>Blade (Back and Side)</td>
+                <td>  ---  </td>
+                <td>£10.00</td>
+            </tr>
+            <tr>
+                <td>Shave (Cut Throat)</td>
+                <td>  ---  </td>
+                <td>£6.00</td>
+            </tr>
+            <tr>
+                <td>Shave CLipper</td>
+                <td>  ---  </td>
+                <td>£4.00</td>
+            </tr>
+            <tr>
+                <td>Sytyle Beard</td>
+                <td>  ---  </td>
+                <td>£6.50</td>
+            </tr>
+            <tr>
+                <td>Style Beard (Clipper)</td>
+                <td>  ---  </td>
+                <td>£4.50</td>
+            </tr>
+            <tr>
+                <td>Thread</td>
+                <td>  ---  </td>
+                <td>£3.00</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="Styles">
+        <h3>Styles</h3>
+        <p><img id="Square1" src="img/square.png" width="25%" height="25%"></p>
+        <p><img id="Square2" src="img/square.png" width="25%" height="25%"></p>
+        <p><img id="Square3" src="img/square.png" width="25%" height="25%"></p>
+        <p><img id="Square4" src="img/square.png" width="25%" height="25%"></p>
+        <p><img id="Square5" src="img/square.png" width="25%" height="25%"></p>
+        <p><img id="Square6" src="img/square.png" width="25%" height="25%"></p>
+    </div>
+
+    <div class="times">
+        <h3>Opening Times</h3>
+        <table class="timesTable tabel-borderless">
+            <tr>
+                <td>Monday</td>
+                <td> --- </td>
+                <td>10am</td>
+                <td> - </td>
+                <td>7pm</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td> --- </td>
+                <td>10am</td>
+                <td> - </td>
+                <td>7pm</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td> --- </td>
+                <td>10am</td>
+                <td> - </td>
+                <td>7pm</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td> --- </td>
+                <td>10am</td>
+                <td> - </td>
+                <td>7pm</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td> --- </td>
+                <td>10am</td>
+                <td> - </td>
+                <td>7pm</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td> --- </td>
+                <td>10am</td>
+                <td> - </td>
+                <td>7pm</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td> --- </td>
+                <td>10am</td>
+                <td> - </td>
+                <td>6.30pm</td>
+            </tr>
+        </table>
+        <div class="notice">
+            <h4>Notice</h4>
+            <p>On friday the shop will be closed from 12.30 pm to 1.30 pm in the winter and 1.30 pm to 2.30 pm in the summer.</p>
+        </div>
+    </div>
+    <div class="map">
+        <h3>Location</h3>
+        <a href="https://www.google.com/maps/place/Werneth+Barbers/@53.5344801,-2.1364133,17z/data=!3m1!4b1!4m5!3m4!1s0x487bb7663296760d:0x78e614996e353321!8m2!3d53.5344801!4d-2.1342246"><p>51 Oxford St</p><p>Oldham</p><p>OL9 7SN</p></a>
+    </div>
+
+
+
+
+    <div class="footer">
+        <p>Werneth Barbers is owned by Waheed</p>
+        <p>Website made by Awais Tasleem</p>
+        <a href="https://awaist7860.github.io/Awais-Portofolio/index.html"><p>My Portfolio</p></a>
+        <a href="mailto:awaist7860@hotmail.com"><p>Email Me Here</p></a>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
+</body>
+</html><?php

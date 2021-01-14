@@ -27,6 +27,20 @@ class userDataSet {
         return $dataSet;                                        //Returns dataset
     }
 
+    public function getAllUsers()
+    {
+        $sqlQuery = "SELECT * FROM users";  //SQL Statement to select * from users
+
+        $statement = $this->_dbHandle->prepare($sqlQuery);      // prepare a PDO statement
+        $statement->execute();                      // execute the PDO statement
+
+        $dataSet = [];
+        while ($row = $statement->fetch()) {
+            array_push($dataSet, new userModel($row));
+        }
+        return $dataSet;
+    }
+
     //Method which adds users into database
     public function addUser($name, $password) {
         // Check if username exists
@@ -39,7 +53,6 @@ class userDataSet {
         }
         return false;                                                               //else returns false
     }
-
 }
 
 
