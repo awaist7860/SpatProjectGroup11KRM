@@ -1,0 +1,166 @@
+<?php require('template/header.phtml') ?>                <!--Requiring header-->
+
+<!--Carousal added to make a slide show image-->
+<div id= "demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+
+        <!--Slideshow which transactions from one picture to another-->
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner"
+    <div class="carousel-item active">
+        <img src="images/ferrarienzo.jpg" alt="Indian Art" width="1000" height="1000">
+        <div class="carousel-caption">
+            <h3>Ferrari Enzo</h3>
+            <p>Purchase yours now!</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="images/lamborghinicountach.jpg" alt="Furniture" width="1000" height="1000">
+        <div class="carousel-caption">
+            <h3>Lamborghini Countach</h3>
+            <p>Purchase yours now!</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="images/audi.jpg" alt="Jewellery" width="1000" height="1000">
+        <div class="carousel-caption">
+            <h3>Audi TT</h3>
+            <p>Purchase yours now!</p>
+        </div>
+    </div>
+</div>
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</a>
+</div>
+
+<!--About Us Section-->
+<section class="my-5"
+<div class="py-5"
+<div>
+    <h2 class="text-center"> About Us</h2>
+</div>
+
+<!--adding the text to the about us section-->
+<div class="container-fluid"
+<div class="row"
+<p> We are the UKs number 1 online auction site! </p>
+<p> We have a variety of collectables from the most iconic art pieces to </p>
+<p> some of the rarest jewellery made!</p>
+</div
+</div>
+</div>
+
+<!--This is adding the text to the where we are based and how does it work section-->
+<section class="my-5"
+<div class="how-header"
+<div>
+    <h2 class="text-center"> Where are we based & how does it work?</h2>
+    <p> We are based in Salford and once you have made a bid we will notify you if you have won. </p>
+    <p>It is as simple as that!</p>
+</div>
+</div>
+</section>
+
+<!--This is the popular categories images section where I show the popular cars for auction-->
+<div class="Popular categories container">
+    <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"><strong> Popular Cars </strong></h1>
+    <hr class="popularcategoryimages">
+    <div class="row text-center text-lg-left">
+
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="image-fluid img-thumbnail" src="images/1957.jpg" alt="">
+                <p>1957 Corvette</p>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="images/volkwagenbeetle.jpg" alt="">
+                <p> Volkwagen Beetle</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="images/shelbymustang.jpg" alt="">
+                <p>Shelby Mustang Cobra</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="images/1978pontiacfirebird.jpg" alt="">
+                <p>1978 Pontiac Firebird Trans Am</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="images/delorean.jpg" alt="">
+                <p>Ferrari Enzo</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="images/ferrarienzo.jpg" alt="">
+                <p>Ferrari Enzo</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="images/1955chevy.jpg" alt="">
+                <p>1955 Chevy Bel Air</p>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+            <a href="controller/viewAuctions.php" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="images/1937packard.jpg" alt="">
+                <p>1937 Packard</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--This is the how it works section-->
+<div class="howitworkstitle">
+    <div class="container">
+        <div class="title">
+            <h2>How it works</h2>
+        </div>
+
+        <!--This is the text for the bid, win and enjoy section-->
+        <div class="bodytext1">
+            <!--<div id="whatever">-->
+            <div class="bid-model">
+                <h3>Bid</h3>
+                <p>Choose a car you like and make a bid</p>
+            </div>
+            <div class="win-model">
+                <h3>Win</h3>
+                <p>If you are the highest bidder then you have <strong> WON!</strong></p>
+            </div>
+            <div class="discovery-model">
+                <h3>Enjoy</h3>
+                <p>Enjoy the car as we know it will be a luxurious item and make sure to keep it safe as it will be a good investment</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    </tbody>
+    </table>
+</form>
+</form>
+
+<?php require('template/footer.phtml') ?>               <!--Requiring footer-->
+
+
+
+

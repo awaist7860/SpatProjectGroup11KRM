@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c908245e-e925-4fa6-9e29-0c21775d20f2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +31,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1n1LE1NqDEWSrnN7gWGaxmB6j2O" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,16 +43,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\HackCam\SPAT Project\SpatProjectGroup11KRM\css" />
       <recent name="C:\Users\User\Documents\HackCam\SPAT Project\SpatProjectGroup11KRM\Views" />
       <recent name="C:\Users\User\Documents\HackCam\SPAT Project\SpatProjectGroup11KRM\Models" />
       <recent name="C:\Users\User\Documents\HackCam\SPAT Project\SpatProjectGroup11KRM\js" />
       <recent name="C:\Users\User\Documents\HackCam\SPAT Project\SpatProjectGroup11KRM\fonts" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SPATProject" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8001">
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -41,20 +69,67 @@
       <option name="presentableId" value="Default" />
       <updated>1610552537667</updated>
       <workItem from="1610552540974" duration="746000" />
+      <workItem from="1610625467607" duration="1166000" />
+      <workItem from="1610631640216" duration="761000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2305" y="91" key="#PHP" timestamp="1610631716009">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="2305" y="91" key="#PHP/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610631716009" />
+    <state x="2054" y="84" width="1089" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610631725351">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="2054" y="84" width="1089" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610631725351" />
+    <state x="2512" y="219" key="FileChooserDialogImpl" timestamp="1610631661928">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610625503473" />
+    <state x="2512" y="219" key="FileChooserDialogImpl/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610631661928" />
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom" timestamp="1610632446290">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610632446290" />
+    <state width="1493" height="119" key="GridCell.Tab.0.center" timestamp="1610632446290">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="119" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610632446290" />
+    <state width="1493" height="119" key="GridCell.Tab.0.left" timestamp="1610632446290">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="119" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610632446290" />
+    <state width="1493" height="119" key="GridCell.Tab.0.right" timestamp="1610632446290">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state width="1493" height="119" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610632446290" />
     <state x="652" y="242" key="NewPhpClassDialog" timestamp="1610553131718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="652" y="242" key="NewPhpClassDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610553131718" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610553031792">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2555" y="354" key="NewPhpFileDialog" timestamp="1610631775562">
+      <screen x="1920" y="0" width="1536" height="832" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610553031792" />
+    <state x="2555" y="354" key="NewPhpFileDialog/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610631775562" />
+    <state x="2506" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610632244615">
+      <screen x="1920" y="0" width="1536" height="832" />
+    </state>
+    <state x="2506" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1536.832/0.0.1920.1040@1920.0.1536.832" timestamp="1610632244615" />
   </component>
 </project>
