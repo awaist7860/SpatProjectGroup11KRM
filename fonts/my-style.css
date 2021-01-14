@@ -1,0 +1,265 @@
+*{margin: 0;  box-sizing: border-box;  padding:0;  }
+/*
+The html and body
+ */
+html,body{
+    height: 100%;
+    margin: 0;
+}
+
+/*
+Nav Bar inside header page
+ */
+
+.navbar-collapse{
+    height: 60px;
+}
+
+.navbar{
+    background: #6c757d;
+    color: white;
+}
+
+/*
+Carousel Image inside header page
+ */
+.carousel-inner img {
+    width: 100%;
+    height: 90vh;
+}
+
+/*
+Index Page- About us and text sections
+ */
+.my-5 {
+    text-align: center;
+    min-height: 100%;
+}
+
+.container-fluid{
+    min-height: 100%;
+}
+
+.bodytext1{
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    color: darkorange;
+}
+
+.bid-model{
+    grid-column: 2/3;
+    color: darkorange;
+}
+
+.win-model{
+    grid-column: 3/3;
+    color: darkorange;
+}
+
+.howitworkstitle{
+    background-color: lightgrey;
+}
+
+/*
+Header Page
+ */
+
+.nav-link{
+    color: white;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+/*
+Footer Page
+ */
+.row{
+    text-align: center;
+}
+
+.title{
+    background-color: lightgrey;
+    color: darkorange;
+}
+
+
+/* Login Form */
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/*
+.modal-title{
+    color: black;
+}
+*/
+
+
+/* Login button */
+.loginbtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Login button button customisation*/
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+
+
+/* Css for footer */
+
+/*FOOTER*/
+
+footer {
+    background: grey;
+    background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+    background: linear-gradient(59deg, #3A6073, #16222A);
+    color: white;
+    margin-top:100px;
+}
+
+footer a {
+    color: #fff;
+    font-size: 14px;
+    transition-duration: 0.2s;
+}
+
+footer a:hover {
+    color: #FA944B;
+    text-decoration: none;
+}
+
+.copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+    padding-top: 2em;
+    color: white;
+}
+
+
+/*SOCİAL Network Icons*/
+
+/* footer social icons */
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+}
+
+/* footer social icons */
+.social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+}
+/* Social media hover */
+.social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+}
+
+/* Social networks */
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+    color: #fff;
+}
+
+/* Hovering Social networks */
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+    color: #44BCDD;
+}
+
+/* Social media circle shape */
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+/* Social media circle shape */
+.social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* Hover effect for social media*/
+.social-circle li a:hover i,
+.triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+/* Colour for social media */
+.social-network a {
+    background-color: #F9F9F9;
+}
+
+.aboutimg{
+    width: 25%;
+    height: 100px;
+}
+
+.display-4{
+    text-align: center;
+}
