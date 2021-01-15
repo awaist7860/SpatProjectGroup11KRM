@@ -16,7 +16,7 @@ class Database {
      */
     public static function getInstance() {
 
-=======
+
 
 //        $username ='sgb849';
 //        $password = 'f1m9mHBhjktiNqf';
@@ -30,7 +30,6 @@ class Database {
         $dbName = 'hc21_11';
 
        
-=======
 
 //        $host = "82.19.89.2";
 //        $username ='SA';
