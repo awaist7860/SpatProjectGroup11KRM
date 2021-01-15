@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< Updated upstream
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -23,6 +24,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Database.php" afterDir="false" />
     </list>
+=======
+  <component name="ChangeListManager">
+    <list default="true" id="bf046de1-3f49-49d2-bcf0-0a1dfc191332" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,11 +39,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="PhpTemplates">
     <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1n1LE1NqDEWSrnN7gWGaxmB6j2O" />
+=======
+  <component name="ProjectId" id="1n1M0LU3RL3d7JXI0M7lU3jru1Q" />
+>>>>>>> Stashed changes
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,7 +55,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Views" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> Stashed changes
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,6 +68,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\HackCam\SPAT Project\SpatProjectGroup11KRM\Views" />
@@ -80,12 +94,24 @@
       <workItem from="1610624227525" duration="4179000" />
       <workItem from="1610630903451" duration="972000" />
       <workItem from="1610718219920" duration="819000" />
+=======
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf046de1-3f49-49d2-bcf0-0a1dfc191332" name="Default Changelist" comment="" />
+      <created>1610552919338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610552919338</updated>
+      <workItem from="1610552920381" duration="2167000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< Updated upstream
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -155,5 +181,12 @@
     </state>
     <state x="510" y="0" width="1585" height="829" key="dock-window-1/0.0.2560.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1610631801898" />
     <state x="510" y="0" width="1585" height="829" key="dock-window-1/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1610721238652" />
+=======
+  <component name="WindowStateProjectService">
+    <state x="417" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610556859306">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="417" y="414" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1040/2560.0.1440.860/-1920.0.1920.1040@0.0.2560.1040" timestamp="1610556859306" />
+>>>>>>> Stashed changes
   </component>
 </project>
