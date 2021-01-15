@@ -16,6 +16,7 @@ class userDataSet {
     //Method which fetches users using SQL
     public function fetchUsers($name) {
         $sqlQuery = "SELECT * FROM hc21_11.users WHERE username = ?" ;  //SQL Statement to select * from users
+        //$sqlQuery = "SELECT * FROM hc21_11.users WHERE username = ?" ;  //SQL Statement to select * from users
 
         $statement = $this->_dbHandle->prepare($sqlQuery);      // prepare a PDO statement
         $statement->execute(array($name));                      // execute the PDO statement
@@ -52,6 +53,49 @@ class userDataSet {
             return true;                                                            //Returns true is username exists
         }
         return false;                                                               //else returns false
+    }
+
+    public function fetchAdmin()
+    {
+        $sqlQuery = "SELECT * FROM hc21_11.users";
+
+        $statement =$this->_dbHandle->prepare($sqlQuery);
+        $statement->execute();
+
+        $dataSet =[];
+        while ($row=$statement->fetch())
+        {
+            $dataSet[] = new User($row);
+        }
+        return $dataSet;
+
+    }
+
+    public function loginUser($username, $password)
+    {
+        $sqlQuery = "SELECT username,password FROM hc21_11.users WHERE username = '$username' AND password = '$password'";
+
+        $statement =$this->_dbHandle->prepare($sqlQuery);
+        $statement->execute();
+
+        $dataSet =[];
+        $dataSet2 =[];
+        while ($row=$statement->fetch())
+        {
+            $dataSet[] = new User($row);
+        }
+        while ($row=$statement->fetch())
+        {
+            $dataSet2[] = new User($row);
+        }
+
+        return $dataSet;
+
+    }
+
+    public function fecthAdmin()
+    {
+        //$sqlQuery = "SELECT username,password FROM hc21_11.users WHERE username = '$username' AND password = '$password'";
     }
 }
 

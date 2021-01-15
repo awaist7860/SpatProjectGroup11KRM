@@ -24,11 +24,15 @@ class LoginModel
         if(isset($userData[0]) && password_verify($psw, $userData[0]->getPassword()))
         {
             $_SESSION["id"] = $userData[0]->getID();    //gets ID
-            $_SESSION["username"] = $email;                 //gets email
+            $_SESSION["username"] = $email;
+            //$_SESSION["admin"] = $userData[2]->getAdmin(); //gets admin
+            //gets email
             return true;                                    //If the information is right then return true
         }
         return false;                                       //else return false
     }
+
+
 
     //Register method allowing users to register
     public function register($username, $password) {
