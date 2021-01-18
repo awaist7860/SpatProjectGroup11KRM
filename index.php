@@ -71,6 +71,7 @@ if(isset($_POST['login']))
         <?php }
 
         //This works for checking admin
+    //need to check count next
         if($admin == "1")//this checks if user is admin
         {
             ?><h4>Username: <?php echo $user?> is an admin</h4><?php
@@ -83,5 +84,7 @@ if(isset($_POST['login']))
             //this will go to normal user
             //redirect to a normal user html webpage
         }
+
+
 }
 
