@@ -14,21 +14,21 @@
     </ul>
     <div class="carousel-inner">
     <div class="carousel-item active">
-        <img src="images/networkinfrastructure.jpg" alt="networkinfrastructure" width="300" height="200">
+        <img src="images/networkinfrastructure.jpg" alt="networkinfrastructure" width="1000" height="1000">
         <div class="carousel-caption">
             <h3>IT Infrastructure</h3>
             <p>Purchase yours now!</p>
         </div>
     </div>
     <div class="carousel-item">
-        <img src="images/ITSecurity.jpg" alt="ITSecurity" width="300" height="200">
+        <img src="images/ITSecurity.jpg" alt="ITSecurity" width="1000" height="1000">
         <div class="carousel-caption">
             <h3>IT Security</h3>
             <p>Purchase yours now!</p>
         </div>
     </div>
     <div class="carousel-item">
-        <img src="images/softwaredevelopmentjpg.jpg" alt="softwaredevelopmentjpg" width="300" height="200">
+        <img src="images/softwaredevelopmentjpg.jpg" alt="softwaredevelopmentjpg" width="1000" height="1000">
         <div class="carousel-caption">
             <h3>IT Software Development</h3>
             <p>Purchase yours now!</p>
@@ -216,7 +216,7 @@ $SearchDataSet1 = (new userDataSet())->getAllUsers();?>
 
 
     body{
-        //background-image: url(img/barber%20pic%20for%20background.jpg);
+        background-image: url(img/barber%20pic%20for%20background.jpg);
         background-color: #A38983;
 
         height: 120px;
@@ -280,29 +280,43 @@ $SearchDataSet1 = (new userDataSet())->getAllUsers();?>
         <h1>Werneth Barbers</h1>
     </div>
 
-    <div class="container" style="color: #1b1e21">
-        <div class="row">
-            <?php
-            foreach ($SearchDataSet1 as $Key => $Search){ ?>
+<!--    <div class="container" style="color: #1b1e21">-->
+<!--        <div class="row">-->
+<!--            --><?php
+//            foreach ($SearchDataSet1 as $Key => $Search){ ?>
+<!---->
+<!--                <div class="col-md-3 col-md-6">-->
+<!--                    <div class="card text-center">-->
+<!--                        <div class="card-block">-->
+<!--                            <h4>User ID: --><?php //echo $Search->getID()?><!--</h4>-->
+<!--                        </div>-->
+<!--                        <div class="card-title">-->
+<!--                            <h4>Username: --><?php //echo $Search->getUserName()?><!--</h4>-->
+<!--                        </div>-->
+<!--                        <div class="card-text">-->
+<!--                            <p>Password: --><?php //echo $Search->getPassword()?><!--</p>-->
+<!--                            <p>Admin: --><?php //echo $Search->getAdmin()?><!--</p>-->
+<!--                           checks to see admin-->-->
+<!--                            <p>Admin: --><?php //if($Search->getAdmin() == true)
+//                            {
+//                                echo "is admin";
+//                            }
+//                            else
+//                                {
+//                                    echo "not admin";
+//                                }?><!--</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--            --><?php //}
+//            ?>
+<!--        </div>-->
+<!--    </div>-->
 
-                <div class="col-md-3 col-md-6">
-                    <div class="card text-center">
-                        <div class="card-block">
-                            <h4>Lot Number <?php echo $Search->getID()?></h4>
-                        </div>
-                        <div class="card-title">
-                            <h4><?php echo $Search->getUserName()?></h4>
-                        </div>
-                        <div class="card-text">
-                            <p><?php echo $Search->getPassword()?></p>
-                        </div>
-                    </div>
-                </div>
 
-            <?php }
-            ?>
-        </div>
-    </div>
+
+
 
     <div class="Services">
         <h3>Services</h3>
@@ -448,6 +462,28 @@ $SearchDataSet1 = (new userDataSet())->getAllUsers();?>
         <a href="https://www.google.com/maps/place/Werneth+Barbers/@53.5344801,-2.1364133,17z/data=!3m1!4b1!4m5!3m4!1s0x487bb7663296760d:0x78e614996e353321!8m2!3d53.5344801!4d-2.1342246"><p>51 Oxford St</p><p>Oldham</p><p>OL9 7SN</p></a>
     </div>
 
+<!--    <div id="id01" class="modal">-->
+        <form class="modal-content animate" action="../index.php" method="post" enctype="multipart/form-data">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <label for="uname" style="color: #1b1e21"><b>Username</b></label>
+
+                <input type="text" class="form-control" name="username" placeholder="username" required="required"/>
+
+                <label for="psw" style="color: #1b1e21"><b>Password</b></label>
+                <input type="password" class="form-control" name="password" placeholder="password" required="required"/>
+                <input type="submit" class="btn btn-primary" name="login" value="Login"/>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+<!--    </div>-->
+
 
 
 
@@ -470,6 +506,9 @@ $SearchDataSet1 = (new userDataSet())->getAllUsers();?>
         document.getElementById("main").style.marginLeft= "0";
     }
 </script>
+
+
+
 
 </body>
 </html><?php

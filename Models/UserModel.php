@@ -4,7 +4,7 @@
 class userModel {
 
     //Proctected values
-    protected $_id, $_username, $_password, $_admin;
+    protected $_id, $_username, $_password,$_admin;
     protected $email;
 
     //Constructor
@@ -12,6 +12,7 @@ class userModel {
         $this->_id = $dbRow['id'];
         $this->_username = $dbRow['username'];
         $this->_password = $dbRow['password'];
+        //test for admin
         $this->_admin = $dbRow['admin'];
     }
 
@@ -30,7 +31,7 @@ class userModel {
         return $this->_password;
     }
 
-    public function getAdmin() {
+    public function getAdmin() {//gets admin
         return $this->_admin;
     }
 
