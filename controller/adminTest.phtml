@@ -1,0 +1,71 @@
+<?php
+
+
+include_once '../Models/LoginModel.php';            //Getting the login model
+include_once '../Models/UserDataSet.php';           //Getting the user data set
+include_once '../Models/UserModel.php';             //Getting the user model
+
+//Starting session
+session_start();
+
+
+
+//$loginModel = new LoginModel();
+
+
+
+//$result = $loginModel->adminLogin($email, $pasw);
+
+function clean($sanString)
+{
+    $sanString = stripslashes($sanString);
+    $sanString = strip_tags($sanString);
+    $sanString = htmlentities($sanString);
+    return $sanString;
+}
+
+$view = new stdClass();
+$view->pageTitle ='Login';
+//$username = "";
+$view->message = "";
+
+
+if (isset($_POST['login']))
+{
+    $username = clean($_POST['username']);
+    $password = md5($_POST['password']);
+    $userDataSet = new LoginModel();
+    $view->userDataSet = $userDataSet->adminLogin($username,$password);
+    $countUserDataSet = count($view->userDataSet);
+
+    if($countUserDataSet == 1)
+    {
+        session_start();
+        $_SESSION['username'] = $username;
+        $view->message = "you have logged in successfully ";
+        header('location:/index.php');
+        die();
+    }
+    else {
+        $view->message = "Invalid password and username";
+    }
+
+
+
+
+
+
+
+}
+
+//    $user = "";
+//    $pass = "";
+//    $admin = "";
+//
+//
+//    foreach($userDataSet as $loginModel)
+//    {
+//        $user = $loginModel->getUserName();
+//        $pass = $loginModel->getPassword();
+//        $admin = $loginModel->getAdmin();
+//    }

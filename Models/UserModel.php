@@ -4,7 +4,7 @@
 class userModel {
 
     //Proctected values
-    protected $_id, $_username, $_password;
+    protected $_id, $_username, $_password,$_admin;
     protected $email;
 
     //Constructor
@@ -12,6 +12,8 @@ class userModel {
         $this->_id = $dbRow['id'];
         $this->_username = $dbRow['username'];
         $this->_password = $dbRow['password'];
+        //test for admin
+        $this->_admin = $dbRow['admin'];
     }
 
     //Method which returns ID
@@ -27,6 +29,10 @@ class userModel {
     //Method which returns password
     public function getPassword() {
         return $this->_password;
+    }
+
+    public function getAdmin() {//gets admin
+        return $this->_admin;
     }
 
     //Method which returns email
