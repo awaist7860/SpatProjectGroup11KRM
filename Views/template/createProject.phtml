@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream:Views/template/createProject.phtml
 <?php require(__DIR__ . '/../../Views/template/header.phtml') ?>               <!--Requiring header-->
+=======
+<?php require('template/header.phtml') ?>               <!--Requiring header-->
+>>>>>>> Stashed changes:Views/createProject.phtml
 
-<!--CSS for create auction-->
+<!--CSS for create project-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,8 +76,13 @@
 </head>
 <body>
 
+<<<<<<< Updated upstream:Views/template/createProject.phtml
 <!--Create auction HTML-->
 <form action="createAuction.php" method="post" enctype="multipart/form-data">
+=======
+<!--html for create project-->
+<form action="createProject.php" method="post" enctype="multipart/form-data">
+>>>>>>> Stashed changes:Views/createProject.phtml
     <div class="container">
         <h1>Create Auction</h1>
         <p>Please fill in this form to create an auction.</p>
@@ -88,8 +97,19 @@
 
         <!--Title section-->
         <div>
+<<<<<<< Updated upstream:Views/template/createProject.phtml
             <label for="title"><b>Title</b></label>
             <input type="text" placeholder="Enter Title" name="title" id="title" required>
+=======
+            <label for="projectName"><b>Project Name</b></label>
+            <input type="text" placeholder="Enter project name" name="projectname" id="title" required>
+        </div>
+
+        <!--customer name section-->
+        <div>
+            <label for="customerName"><b>Customer Name</b></label>
+            <input type="text" placeholder="Enter your name" name="customername" id="title" required>
+>>>>>>> Stashed changes:Views/createProject.phtml
         </div>
 
         <!--Description section-->
@@ -99,7 +119,10 @@
                 <textarea type="text" placeholder="Enter Description" name="description" id="description" rows="3" required></textarea>
             </div>
         </div>
+
+        <!--price section-->
         <div>
+<<<<<<< Updated upstream:Views/template/createProject.phtml
             <label for="title"><b>Price</b></label>
             <input type="number" placeholder="Enter Title" name="price" id="title" required>
         </div>
@@ -128,6 +151,20 @@
                     </option>
                 </select>
             </div>
+=======
+            <label for="start price"><b>Please enter budget Start Price</b></label>
+            <input type="number" placeholder="Enter Start Price" name="startprice" id="title" required>
+        </div>
+        <div>
+            <label for="end price"><b>Please enter budget End Price</b></label>
+            <input type="number" placeholder="Enter End Price" name="endprice" id="title" required>
+        </div>
+
+        <!--deadline section-->
+        <div>
+            <label for="deadline"><b>Please enter a deadline in format: YYYY/MM/DD</b></label>
+            <input type="text" placeholder="YYYY/MM/DD" name="deadline" id="title" required>
+>>>>>>> Stashed changes:Views/createProject.phtml
         </div>
 
         <!--Image Section-->
@@ -140,11 +177,19 @@
         <hr>
 
         <!--Submit Button Section-->
+<<<<<<< Updated upstream:Views/template/createProject.phtml
         <button type="submit" name="sbt" class="registerbtn">Submit</button>
+=======
+        <button type="submit" name="sbt" class="registerbtn">Submit</button">
+>>>>>>> Stashed changes:Views/createProject.phtml
     </div>
 </form>
 
 </body>
 </html>
 
+<<<<<<< Updated upstream:Views/template/createProject.phtml
 <?php require(__DIR__ . '/../Views/template/footer.phtml') ?>               <!--Requiring the footer-->
+=======
+<?php require('template/footer.phtml') ?>              <!--Requiring footer-->
+>>>>>>> Stashed changes:Views/createProject.phtml

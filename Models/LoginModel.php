@@ -12,9 +12,14 @@ class LoginModel
     //Constructor
     public function __construct()
     {
+<<<<<<< Updated upstream
         $this->_dbInstance = Database::getInstance();       //Connect to database
         $this->_dbConnection = $this->_dbInstance->getDbConnection();  //gets the database connection
         $this->_dbHandle = $this->_dbInstance->getdbConnection();
+=======
+        $this->_dbInstance = Database::getInstance();                   //Connect to database
+        $this->_dbConnection = $this->_dbInstance->getDbConnection();   //gets the database connection
+>>>>>>> Stashed changes
     }
 
     //Method login to allow users to login//Need to redo with a returned array
@@ -26,7 +31,7 @@ class LoginModel
         //If statement used to verify password and get the password
         if(isset($userData[0]) && password_verify($psw, $userData[0]->getPassword()))
         {
-            $_SESSION["id"] = $userData[0]->getID();    //gets ID
+            $_SESSION["id"] = $userData[0]->getID();        //gets ID
             $_SESSION["username"] = $email;                 //gets email
             return true;                                    //If the information is right then return true
         }
@@ -52,7 +57,7 @@ class LoginModel
     //Register method allowing users to register
     public function register($username, $password) {
         $userDataset = new userDataset();                       //new user data set
-        return $userDataset->addUser($username, $password);     //returns user data set and calls add user method
+        return $userDataset->addUser($username, $password);     //returns user data set and calls add user method to add users to the database
     }
 
 }

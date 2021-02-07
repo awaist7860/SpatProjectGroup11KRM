@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
 session_start();                                                            //Starts session
 $view = new stdClass();                                                     //New class
 $view->pageTitle = 'Homepage';                                              //Giving a page title which is homepage
@@ -88,3 +89,17 @@ if(isset($_POST['login']))
 
 }
 
+=======
+session_start();                                                            //Starting session
+$view = new stdClass();                                                     //New class
+$view->pageTitle = 'Homepage';//Page title is homepage
+require_once('Views/index.phtml');                                          //Requiring the index phtml page
+
+//This is for testing
+//$to = "awaist7860@hotmail.com";
+//$subject = "Projects";
+//$txt = "This is my project";
+//$headers = "From: danyal.aurangzeb@hotmail.com" . "\r\n" .
+//    "CC: danyalaurangzeb@hotmail.co.uk";
+//mail($to, $subject, $txt, $headers);
+>>>>>>> Stashed changes

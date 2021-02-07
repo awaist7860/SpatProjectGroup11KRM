@@ -13,9 +13,9 @@ class UserDataSet {
         $this->_dbHandle = $this->_dbInstance->getdbConnection();               //gets the database connection
     }
 
-    //Method which fetches users using SQL
+    //Method which fetches users
     public function fetchUsers($name) {
-        $sqlQuery = "SELECT * FROM hc21_11.users WHERE username = ?" ;  //SQL Statement to select * from users
+        $sqlQuery = "SELECT * FROM hc21_11.users WHERE username = ?" ;
 
         $statement = $this->_dbHandle->prepare($sqlQuery);      // prepare a PDO statement
         $statement->execute(array($name));                      // execute the PDO statement
@@ -27,9 +27,10 @@ class UserDataSet {
         return $dataSet;                                        //Returns dataset
     }
 
+    //Method which fetches all users
     public function getAllUsers()
     {
-        $sqlQuery = "SELECT * FROM users";  //SQL Statement to select * from users
+        $sqlQuery = "SELECT * FROM users";
 
         $statement = $this->_dbHandle->prepare($sqlQuery);      // prepare a PDO statement
         $statement->execute();                      // execute the PDO statement
@@ -38,7 +39,7 @@ class UserDataSet {
         while ($row = $statement->fetch()) {
             array_push($dataSet, new userModel($row));
         }
-        return $dataSet;
+        return $dataSet;    //Returns dataset
     }
 
     //Method which adds users into database
@@ -46,7 +47,7 @@ class UserDataSet {
         // Check if username exists
         $usersWithUsername = $this->fetchUsers($name);
         if(count($usersWithUsername) ===  0) {
-            $sqlQuery = "INSERT INTO hc21_11.users (username, password) VALUES(?, ?)";      //Inserts into users database
+            $sqlQuery = "INSERT INTO hc21_11.users (username, password) VALUES(?, ?)";
             $statement = $this->_dbHandle->prepare($sqlQuery);                      // prepare a PDO statement
             $statement->execute(array($name, $password));                           // prepare a PDO statement
             return true;                                                            //Returns true is username exists

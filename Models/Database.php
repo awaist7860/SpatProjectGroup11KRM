@@ -15,6 +15,7 @@ class Database {
      * @return Database
      */
     public static function getInstance() {
+<<<<<<< Updated upstream
 
 
 
@@ -24,11 +25,14 @@ class Database {
 //        $dbName = 'sgb849';
 
 
+=======
+>>>>>>> Stashed changes
         $username ='hc21-11';
         $password = 'j5zuR5rjKDGitbd';
         $host = 'poseidon.salford.ac.uk';
         $dbName = 'hc21_11';
 
+<<<<<<< Updated upstream
        
 
 
@@ -41,6 +45,9 @@ class Database {
 
 
        if(self::$_dbInstance === null) { //checks if the PDO exists
+=======
+        if(self::$_dbInstance === null) { //checks if the PDO exists
+>>>>>>> Stashed changes
             // creates new instance if not, sending in connection info
             self::$_dbInstance = new self($username, $password, $host, $dbName);
         }
@@ -54,9 +61,9 @@ class Database {
      * @param $database
      */
     private function __construct($username, $password, $host, $database) {
-        try { 
+        try {
             $this->_dbHandle = new PDO("mysql:host=$host;dbname=$database",  $username, $password); // creates the database handle with connection info
-        //$this->_dbHandle = new PDO('mysql:host=' . $host . ';dbname=' . $database,  $username, $password); // creates the database handle with connection info
+            //$this->_dbHandle = new PDO('mysql:host=' . $host . ';dbname=' . $database,  $username, $password); // creates the database handle with connection info
             /**
              * The first setAttribute() line, which tells PDO to disable emulated prepared statements and use real prepared statements. This makes sure the statement and the values aren't parsed by PHP before sending it to the MySQL server (giving a possible attacker no chance to inject malicious SQL).
              */
@@ -65,8 +72,8 @@ class Database {
 
         }
         catch (PDOException $e) { // catch any failure to connect to the database
-	    echo $e->getMessage();
-	}
+            echo $e->getMessage();
+        }
     }
 
     /**

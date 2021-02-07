@@ -16,7 +16,7 @@ $loginModel = new LoginModel();     //New login model
 $result = $loginModel->login($email, $pasw);    //If result then login
 print_r($result);                   //Print result
 
-//If statement to do the anti spam feature
+//If statement to do the anti spam feature and if correct result then
 if($result AND $test == 4) {
     header("Location: ../index.php? " . $result);   //Redirect to header
 }

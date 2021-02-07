@@ -4,16 +4,23 @@
 class userModel {
 
     //Proctected values
+<<<<<<< Updated upstream
     protected $_id, $_username, $_password,$_admin;
     protected $email;
+=======
+    protected $_id, $_username, $_password;
+>>>>>>> Stashed changes
 
     //Constructor
     public function __construct($dbRow) {
         $this->_id = $dbRow['id'];
         $this->_username = $dbRow['username'];
         $this->_password = $dbRow['password'];
+<<<<<<< Updated upstream
         //test for admin
         $this->_admin = $dbRow['admin'];
+=======
+>>>>>>> Stashed changes
     }
 
     //Method which returns ID
@@ -30,6 +37,7 @@ class userModel {
     public function getPassword() {
         return $this->_password;
     }
+<<<<<<< Updated upstream
 
     public function getAdmin() {//gets admin
         return $this->_admin;
@@ -41,3 +49,6 @@ class userModel {
         return $this->getEmail();
     }
 }
+=======
+}
+>>>>>>> Stashed changes

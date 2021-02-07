@@ -2,21 +2,33 @@
 
 $view = new stdClass();
 $view->pageTitle = 'Create Project';    //Page title is create auction
+<<<<<<< Updated upstream
 session_start();    //Start session
 require_once("../controller/createProject.php");            //Requiring create auction controller
 require_once('../Views/createProject.phtml');               //Requiring create auction phtml page
 require_once(__DIR__ . "/../Models/ProjectDataSet.php");              //Requires auction model data set
 $category = null;
 $price = null;
+=======
+session_start();    //Starting session
+require_once("../controller/createProject.php");            //Requiring create project controller
+require_once('../Views/createProject.phtml');               //Requiring create project phtml page
+require_once(__DIR__ . "/../Models/ProjectDataSet.php");              //Requires project dataset
 
+$startPrice = null;
+$endPrice = null;
+>>>>>>> Stashed changes
+
+//If submit button is clicked then do this
 if(isset($_POST['sbt']))
 {
     $category =  $_POST['category'];
     $price = $_POST['price'];
 }
 
-//If message to get title and description
+//If message to get project name, customer name, description and title
 if(count($_POST) > 0) {
+<<<<<<< Updated upstream
     $errorMessage = "";
     $title = "";
     $description = "";
@@ -34,6 +46,42 @@ if(count($_POST) > 0) {
     } else {
         $errorMessage = "Please enter a description";
     }
+=======
+$errorMessage = "";
+$projectName = "";
+$customerName = "";
+$description = "";
+$deadline = "";
+
+
+//Error message to make sure project name is not left blank
+if(isset($_POST["projectname"])) {
+    $projectName = $_POST["projectname"];
+} else {
+    $errorMessage = "Please enter a project name";
+}
+
+//Error message to make sure customer name is not left blank
+if(isset($_POST["customername"])) {
+    $customerName = $_POST["customername"];
+} else {
+    $errorMessage = "Please enter a customer name";
+}
+
+//Error message to make sure description is not left blank
+if(isset($_POST["description"])) {
+    $description = $_POST["description"];
+} else {
+    $errorMessage = "Please enter a project description";
+}
+
+//Error message to make sure deadline is not left blank
+if(isset($_POST["deadline"])) {
+    $deadline = $_POST["deadline"];
+} else {
+    $errorMessage = "Please enter a project deadline";
+}
+>>>>>>> Stashed changes
 
     // Upload image section
     $imagePath = "";
@@ -55,7 +103,7 @@ if(count($_POST) > 0) {
         }
     }
 
-    //Display errors
+    //Displays a error in the url if there os a error
     if(strlen($errorMessage) > 0) {
         header("Location: createProject.php?error=" . urlencode($errorMessage));
     } else {
@@ -64,4 +112,17 @@ if(count($_POST) > 0) {
         $projectDataSet->createAuction($title, $description, $_SESSION["userID"], $imagePath, $category, $price);
     }
 }
+
+//If submit button is clicked then email
+if(isset($_POST['sbt']))
+{
+    $to = " projects@krm.nl";
+    $subject = "Projects";
+    $txt = "This is the project";
+    $headers = "From: danyal.aurangzeb@hotmail.com" . "\r\n" .
+        "CC: danyalaurangzeb@hotmail.co.uk";
+    mail($to, $subject, $txt, $headers);
+}
+
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-session_start();                //Starts session
+session_start();                //Starting session
 $view = new stdClass();
 $view->pageTitle = 'Register';  //Page title is register
 require_once("../controller/register.php");    //Requiring register controller
@@ -16,9 +16,10 @@ if(isset($_POST["username"]) && isset($_POST["psw"])) {
     //If statement to repeat password to get right information
     if($password === $repeatpassword) {
         $loginModel = new LoginModel();      //Gets the login model
-        $response = $loginModel->register($username, password_hash($password, PASSWORD_DEFAULT));
+        $response = $loginModel->register($username, password_hash($password, PASSWORD_DEFAULT));   //Hashes password
 
-        if ($response) {                                                                                         //If response is right then redirect to homepage else display a error message
+        //If response is right then redirect to homepage else display a error message
+        if ($response) {
             header("Location: ../index.php");
         } else {
             header("Location: register.php?error=" . urlencode("Username is already in use"));           //If details are not correct then displays error message

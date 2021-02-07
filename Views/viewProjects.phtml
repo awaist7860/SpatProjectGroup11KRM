@@ -1,0 +1,59 @@
+<?php require(__DIR__ . '/../Views/template/header.phtml') ?>               <!--Requiring header-->
+
+<!--a section for filters -->
+<div class="mt-4 mx-auto bg-light" style="width: 75%; text-align: center">
+    <div class="container">
+
+        <div class="row justify-content-md-center  mt-2 h-100">
+            <div class='col-lg-4 col-md-6 mb-4 mt-5'>
+                <div class='card h-100 border'>
+                    <h5 class="card-title text-center"> Filters </h5>
+                    <form action="viewProjects.php" method="post" class="justify-content-center">
+                        <label>
+                            <input type="radio" name="filters" value="lowToHigh" >
+                        </label> Price : Low To High
+                        <label>
+                            <input type="radio" name="filters" value="highToLow">
+                        </label> Price : High To Low
+                        <h5 class="text-center"><button class=" btn btn-custom" name="submit" type="submit"> Apply Filter </button></h5>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php foreach($projects as $key=>$value){?>
+        <?php if($key % 3 == 0):?>
+        <?php if($key > 0):?>
+    </div>
+    <?php endif;?>
+
+    <!--a section for the project values -->
+    <div class="card-deck mb-2">
+        <?php endif;?>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" height="200px" src=<?="'../images/" . $value->getImageOfProject() . "'"?> alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"><?=$value->getNameOfProject()?></h5>
+                <h5 class="card-title"><?=$value->getNameOfCustomer()?></h5>
+                <h5 class="card-title">Starting Price- £<?=$value->getStartingPriceOfProject()?></h5>
+                <h5 class="card-title">Ending Price- £<?=$value->getEndPriceOfProject()?></h5>
+                <p class="card-text"><?=$value->getShortDescriptionOfProject()?></p>
+                <a href=<?="project.php?id=" . (($page - 1) * $itemsPerPage + $key + 1)?> class="btn btn-primary">View Projects</a>
+            </div>
+        </div>
+        <?php }?>
+    </div>
+</div>
+
+<!--Page navigation to allow previous and next button to work-->
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href=<?="viewProjects.php?page=" . urlencode($previousPage)?>>Previous</a></li>
+        <?php for($index = 0; $index < ceil($totalProjectAmount / $itemsPerPage); $index++):?>
+            <li class="page-item"><a class="page-link" href=<?="viewProjects.php?page=" . urlencode(($index + 1))?>><?=$index + 1?></a></li>
+        <?php endfor; ?>
+        <li class="page-item"><a class="page-link" href=<?="viewProjects.php?page=" . urlencode($nextPage)?>>Next</a></li>
+    </ul>
+</nav>
+</div>
+
+<?php require('template/footer.phtml') ?>       <!--Requiring footer-->
